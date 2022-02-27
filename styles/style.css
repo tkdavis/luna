@@ -3,5 +3,10 @@
 }
 
 body {
-  margin: 0;
+  text-align: center;
+}
+
+#gameScreen {
+  border: 1px solid grey;
+  margin-top: calc(50vw - 625px);
 }
