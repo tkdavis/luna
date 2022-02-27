@@ -4,9 +4,11 @@
 
 body {
   text-align: center;
+  background-color: #202124;
 }
 
 #gameScreen {
+  background-color: #3c4042;
   border: 1px solid grey;
   margin-top: calc(50vw - 625px);
 }

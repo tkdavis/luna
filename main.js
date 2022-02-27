@@ -35,7 +35,7 @@ class Game {
       return;
     }
 
-    ctx.clearRect(0, 0, 600, 800);
+    ctx.clearRect(0, 0, 800, 600);
     playerObj.draw();
   }
 }
@@ -60,11 +60,12 @@ const game = new Game({
 
 const playerObj = new GameObject({
   name: 'Player',
-  width: 100,
-  height: 100,
+  width: 32,
+  height: 32,
   position: {x: 40, y: 40, z: 0},
   rotation: {},
-  color: '#0000FF',
+  color: '#ea7ffc',
+  canvas: canvas,
   ctx: ctx
 })
 
