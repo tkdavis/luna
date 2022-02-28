@@ -2,13 +2,30 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
-  text-align: center;
   background-color: #202124;
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  grid-template-rows: 1;
+  grid-gap: 16px;
+}
+
+#heirarchyWindow {
+  background-color: #3c4042;
+}
+
+#gameViewWindow {
+  background-color: #3c4042;
+  text-align: center;
 }
 
 #gameScreen {
   background-color: #3c4042;
-  border: 1px solid grey;
-  margin-top: calc(50vw - 625px);
+  border: 1px solid rgb(76, 111, 119);
+  border-radius: 4px;
+  margin-top: calc(50vh - 300px);
 }
