@@ -1,4 +1,5 @@
 import GameObject from './core/game-object.js';
+import InputManager from './core/input-manager.js';
 
 let canvas = document.getElementById("gameScreen");
 let ctx = canvas.getContext("2d");
@@ -49,6 +50,9 @@ function gameLoop(timestamp) {
   requestAnimationFrame(gameLoop);
 }
 
+const inputManager = new InputManager();
+inputManager.attachListener();
+
 const game = new Game({
   name: "TestGame",
   canvas: canvas,
@@ -66,7 +70,8 @@ const playerObj = new GameObject({
   rotation: {},
   color: '#ea7ffc',
   canvas: canvas,
-  ctx: ctx
+  ctx: ctx,
+  inputs: inputManager.inputsTriggered
 })
 
 gameLoop()
