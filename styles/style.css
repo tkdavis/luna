@@ -7,7 +7,9 @@ html, body {
 }
 
 body {
-  background-color: #202124;
+  background-color: rgb(31, 36, 40);
+  color: #cacaca;
+  font-family: sans-serif;
   display: grid;
   grid-template-columns: 3fr 9fr;
   grid-template-rows: 1;
@@ -15,17 +17,65 @@ body {
 }
 
 #heirarchyWindow {
-  background-color: #3c4042;
+  background-color: rgb(36, 42, 46);
 }
 
 #gameViewWindow {
-  background-color: #3c4042;
+  background-color: rgb(36, 42, 46);
   text-align: center;
 }
 
 #gameScreen {
-  background-color: #3c4042;
-  border: 1px solid rgb(76, 111, 119);
+  background-color: rgb(36, 42, 46);
+  border: 1px solid #34363a;
   border-radius: 4px;
-  margin-top: calc(50vh - 300px);
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: rgb(51 56 61);
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: rgb(31, 36, 40);
+  color: #cacaca;
+  float: left;
+  border: none;
+  outline: 1px solid #5b5b5b;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgb(58, 51, 61);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: rgb(53, 38, 66);
+}
+
+.tabcontent {
+  width: calc(100% - 120px);
+  height: calc(100% - 120px);
+  background-color: rgb(36, 42, 46);
+  padding: 32px 0;
+}
+
+/* Style the tab content */
+.hide {
+  display: none;
+}
+
+.editor {
+  text-align: initial;
+  padding: 12px;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  margin-top: -32px;
 }

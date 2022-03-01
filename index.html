@@ -10,8 +10,22 @@
 </head>
 <body>
   <section id="heirarchyWindow"></section>
+
   <section id="gameViewWindow">
-    <canvas id="gameScreen" width="800" height="600"></canvas>
+    <!-- Tab links -->
+    <div class="tab">
+      <button id='text-editor-btn' class="tablinks">Script Editor</button>
+      <button id='gameWindow-btn'class="tablinks">Game View</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="text-editor" class="tabcontent">
+      <div class="editor" contenteditable="true"></div>
+    </div>
+
+    <div id="gameWindow" class="tabcontent">
+      <canvas id="gameScreen" width="800" height="600"></canvas>
+    </div>
   </section>
 
   <script type="module" src="main.js"></script>

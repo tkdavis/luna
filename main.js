@@ -5,6 +5,22 @@ let canvas = document.getElementById("gameScreen");
 let ctx = canvas.getContext("2d");
 let lastTime = 0;
 
+
+function openTab(e) {
+  console.log(e.target.id)
+  document.querySelectorAll('.tabcontent').forEach((el) => {
+    console.log(el);
+    if (e.target.id.replace('-btn', '') !== el.id) {
+      el.classList.add('hide');
+    } else {
+      el.classList.remove('hide');
+    }
+  })
+}
+
+document.getElementById('text-editor-btn').addEventListener('click', openTab);
+document.getElementById('gameWindow-btn').addEventListener('click', openTab);
+
 // Luna Game
 class Game {
   constructor(props) {
@@ -74,4 +90,4 @@ const playerObj = new GameObject({
   inputs: inputManager.inputsTriggered
 })
 
-gameLoop()
+gameLoop();
