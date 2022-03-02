@@ -75,3 +75,11 @@ export default class GameObject {
     return isOffScreen;
   }
 }
+
+let editor = document.querySelector(".editor");
+let visualizer = document.querySelector(".visualizer");
+
+editor.addEventListener("input", (e) => {
+   visualizer.innerHTML = e.target.value;
+   Prism.highlightAll();
+})
